@@ -1,0 +1,92 @@
+body {
+  background-color: #eef9bf;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 56px;
+  font-weight: 56px;
+  color: #75b79e;
+  text-align: center;
+  margin: 40px;
+}
+
+section {
+  padding: 0px 10%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 34px;
+  height: 50vh;
+  /* flex-wrap: wrap; */
+}
+
+/* frente verso carta  */
+
+.card {
+  width: 117px;
+  height: 146px;
+  position: relative;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  background-color: #99cea8;
+  border: 1px solid #99cea8;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
+
+.back-face {
+  transform: rotateY(180deg);
+}
+
+.card.selecionado .back-face {
+  /* .card:hover .back-face { */
+  transform: rotateY(0deg);
+}
+
+.card.selecionado .front-face {
+  /* .card:hover .front-face */
+  transform: rotateY(-180deg);
+}
+
+.front-face img {
+  height: 100px;
+  width: 100px;
+}
+
+.back-face img {
+  height: 100px;
+  width: 100px;
+}
+
+.selecionado2 {
+  transform: rotateY(0deg);
+  transform: rotateY(-180deg);
+}
+
+.tempo {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 56px;
+  color: #75b79e;
+  text-align: center;
+  margin: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
